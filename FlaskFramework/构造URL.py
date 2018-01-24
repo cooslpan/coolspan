@@ -1,3 +1,4 @@
+#-*- coding:utf-8 –*-
 from flask import Flask, url_for
 app = Flask(__name__)
 @app.route('/')
@@ -10,7 +11,7 @@ def login(): pass
 def profile(username): pass
 
 with app.test_request_context():
-    print url_for('index')
-    print url_for('login')
-    print url_for('login', next='/')
-    print url_for('profile', username='John Doe')
+    print(url_for('index'))# 调用index函数
+    print(url_for('login'))# 调用login函数
+    print(url_for('login', next='/',gz='gz'))
+    print(url_for('profile', username='John Doe'))
